@@ -1,20 +1,22 @@
-/* Savannah Smalley (Bee) made this code!
-*Made 3/1/21
-*For the purposes of the 20 questions event for ProgClub at GSU
-*/
-
-
-import java.util.Scanner;
-public class Questions {
+	import java.util.Scanner;
+	
+	/*Savannah Smalley
+	 * 
+	 * Made : 3/1/21 
+	 * Last Edited : 3/2/21
+	 * 
+	 */
+	 
+	 
 	public static void main(String[] args) {
-		System.out.println("Welcome to 20 Questions!!! I will attempt to guess what animal you're thinking of!!");
+		System.out.println("Welcome to 20 Questions!!! I will attempt to guess\n what animal you're thinking of!!");
 		System.out.println();
 		System.out.println("First things first, think of an animal.");
 		System.out.println();
 		
 		String answer;
 		Scanner userInput = new Scanner(System.in);
-		
+		while(true) {
 		
 		System.out.println("Question 1: ");
 		System.out.println("Is it a mammal? (Y/N) ==> ");
@@ -26,23 +28,22 @@ public class Questions {
 			if(answer.contains("N") || answer.contains("n")) {
 				System.out.println("Question 3: ");
 				System.out.println("Does it have 4 legs? (Y/N) ==> ");
-				answer = userInput.nextLine();
+			  	answer = userInput.nextLine();
 				if(answer.contains("N") || answer.contains("n")) {
 					System.out.println("Questions 4: ");
 					System.out.println("Does it have ANY legs?? (Y/N) ==> ");
 					answer = userInput.nextLine();
 					if(answer.contains("Y") || answer.contains("y")) {
 						System.out.println("Questions 5: ");
-						System.out.println("Does your animal have the capacity for culture? (Y/N) ==> ");
+						System.out.println("Does your animal swing from tree to tree? (Y/N) ==> ");
 						answer = userInput.nextLine();
 						if(answer.contains("N") || answer.contains("n")) {
-							System.out.println("Question 6: ");
-							System.out.println("Is your animal a marsupial?");
-							answer = userInput.nextLine();
-							
+							System.out.println("Human is your animal!");
+							break;
 						}
 						if(answer.contains("Y") || answer.contains("y")) {
-							System.out.println("Human is your animal!");
+							System.out.println("Monkey is your animal!");
+							break;
 						}
 					}
 					if(answer.contains("N") || answer.contains("n")) {
@@ -51,16 +52,47 @@ public class Questions {
 						answer = userInput.nextLine();
 						if(answer.contains("Y") || answer.contains("y")) {
 							System.out.println("Whale is your animal!");
+							break;
 						}
 					}
 				}
 				if(answer.contains("Y") || answer.contains("y")) {
 					System.out.println("Question 4: ");
-					System.out.println("Can your animal be found in a pet store?");
+					System.out.println("Can your animal be found in a pet store? (Y/N) ==> ");
 					answer = userInput.nextLine();
 					if(answer.contains("N") || answer.contains("n")) {
 						System.out.println("Question 5: ");
 						System.out.println("Is your animal a farm animal? (Y/N) ==> ");
+						answer = userInput.nextLine();
+						if(answer.contains("N") || answer.contains("n")) {
+							System.out.println("Question 6: ");
+							System.out.println("Is your animal native to Asia? (Y/N) ==> ");
+							answer = userInput.nextLine();
+							if(answer.contains("N") || answer.contains("n")) {
+								System.out.println("Question 7: ");
+								System.out.println("Does your animal live in arctic climates? (Y/N) ==> ");
+								answer = userInput.nextLine();
+								if(answer.contains("Y") || answer.contains("y")) {
+									System.out.println("Question 8: ");
+									System.out.println("Does your animal hibernate? (Y/N) ==> ");
+									answer = userInput.nextLine();
+									if(answer.contains("Y") || answer.contains("y")) {
+										System.out.println("Polar Bear is your animal!");
+										break;
+										
+									}
+								}
+							}
+							if(answer.contains("Y") || answer.contains("y")) {
+								System.out.println("Question 7: ");
+								System.out.println("Does your animal like to eat bamboo? (Y/N) ==> ");
+								answer = userInput.nextLine();
+								if(answer.contains("Y") || answer.contains("y")) {
+									System.out.println("Panda is your animal!");
+									break;
+								}
+							}
+						}
 						answer = userInput.nextLine();
 						if(answer.contains("Y") || answer.contains("y")) {
 							System.out.println("Question 6: ");
@@ -76,9 +108,11 @@ public class Questions {
 									answer = userInput.nextLine();
 									if(answer.contains("N") || answer.contains("n")) {
 										System.out.println("Horse is your animal!");
+										break;
 									}
 									if(answer.contains("Y") || answer.contains("y")) {
 										System.out.println("Donkey is your animal!");
+										break;
 									}
 								}
 							}
@@ -88,9 +122,11 @@ public class Questions {
 								answer = userInput.nextLine();
 								if(answer.contains("N") || answer.contains("n")) {
 									System.out.println("Cow is your animal!");
+									break;
 								}
 								if(answer.contains("Y") || answer.contains("y")) {
 									System.out.println("Goat is your animal!");
+									break;
 								}
 							}
 						}
@@ -106,6 +142,7 @@ public class Questions {
 							answer = userInput.nextLine();
 							if(answer.contains("Y") || answer.contains("y")) {
 								System.out.println("Cat is your animal!");
+								break;
 							}
 							if(answer.contains("N") || answer.contains("n")) {
 								System.out.println("Question 7: ");
@@ -117,29 +154,25 @@ public class Questions {
 									answer = userInput.nextLine();
 									if(answer.contains("N") || answer.contains("n")) {
 										System.out.println("Hamster is your animal!");
+										break;
 									}
 									if(answer.contains("Y") || answer.contains("y")) {
 										System.out.println("Rat is your animal!");
+										break;
 									}
 								}
 							}
 						}
 						if(answer.contains("Y") || answer.contains("y")) {
 							System.out.println("Dog is your animal!");
+							break;
 						}
 					}
 				}
 			}
 			if(answer.contains("Y") || answer.contains("y")) {
 				System.out.println("Bat is your animal!");
-				if(answer.contains("N") || answer.contains("n")) {
-					System.out.println("Question 4: ");
-					System.out.println("Can it fly?");
-					answer = userInput.nextLine();
-					if(answer.contains("Y") || answer.contains("y")) {
-						System.out.println("Bat is your animal!");
-					}
-				}
+				break;
 			}
 		}
 		if(answer.contains("N") || answer.contains("n")) {
@@ -152,8 +185,46 @@ public class Questions {
 				answer = userInput.nextLine();
 				if(answer.contains("N") || answer.contains("n")) {
 					System.out.println("Question 4: ");
-					System.out.println("Is your animal a fish? (Y/N) ==> ");
+					System.out.println("Is your animal aquatic? (Y/N) ==> ");
 					answer = userInput.nextLine();
+					if(answer.contains("Y") || answer.contains("y")) {
+						System.out.println("Question 5: ");
+						System.out.println("Does your animal have 8 limbs? (Y/N) ==> ");
+						answer = userInput.nextLine();
+						if(answer.contains("N") || answer.contains("n")) {
+							System.out.println("Question 6: ");
+							System.out.println("Is your animal a crustacean? (Y/N) ==> ");
+							answer = userInput.nextLine();
+							if(answer.contains("Y") || answer.contains("y")) {
+								System.out.println("Question 7: ");
+								System.out.println("Does your animal have large claws? (Y/N) ==> ");
+								answer = userInput.nextLine();
+								if(answer.contains("N") || answer.contains("n")) {
+									System.out.println("Shrimp is your animal!");
+									break;
+								}
+								if(answer.contains("Y") || answer.contains("y")) {
+									System.out.println("Question 8: ");
+									System.out.println("Does your animal have a long body? (Y/N) ==> ");
+									answer = userInput.nextLine();
+									if(answer.contains("N") || answer.contains("n")) {
+										System.out.println("Crab is your animal!");
+										break;
+									}
+									if(answer.contains("Y") || answer.contains("y")) {
+										System.out.println("Lobster is your animal!");
+										break;
+									
+									}
+									break;
+								}
+							}
+						}
+						if(answer.contains("Y") || answer.contains("y")) {
+							System.out.println("Octopus is your animal!");
+							break;
+						}
+					}
 					if(answer.contains("N") || answer.contains("n")) {
 						System.out.println("Question 5: ");
 						System.out.println("Is your animal a bird? (Y/N) ==> ");
@@ -175,12 +246,18 @@ public class Questions {
 						System.out.println("Question 5: ");
 						System.out.println("Can your animal sting? (Y/N) ==> ");
 						answer = userInput.nextLine();
+						if(answer.contains("N") || answer.contains("n")) {
+							System.out.println("Ant is your animal!");
+							break;
+						}
 						if(answer.contains("Y") || answer.contains("y")) {
 							System.out.println("Bee is your animal!");
+							break;
 						}
 					}
 				}
 			}
 		}
+	}
 	}
 }
